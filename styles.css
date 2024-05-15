@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Untuk Header-nya */
+header {
+  background-color: #609966;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Untuk Nav-nya */
+nav {
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #40513b;
+}
+
+/* Untuk Konten(Isinya) */
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+main article {
+  flex: 1 1 60%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #EDF1D6;
+  text-align: justify;
+}
+
+aside {
+  flex: 1 1 35%;
+min-width: fit-content;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+aside img{
+  width: 100px;
+  height: 100px;
+}
+
+/* Untuk footer */
+footer {
+  background-color: #40513b;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Untuk Responsifnya */
+@media only screen and (max-width: 1023px) {
+  main {
+    flex-direction: column;
+  }
+
+  main article,
+  aside {
+    flex: 1 1 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  nav ul {
+    display: none;
+  }
+}
