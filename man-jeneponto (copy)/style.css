@@ -1,0 +1,140 @@
+/* Warna
+#618264
+#79AC78
+#B0D9B1
+#D0E7D2 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins";
+}
+
+#container_head,
+#email {
+  color: white;
+  background-color: #037951;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar ul {
+  display: flex;
+  font-weight: 500;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: #037951;
+}
+
+/* Dropdown container (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  flex-direction: column;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: #f3f3f3;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover,
+.navbar ul li a:hover {
+  color: gold;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Main */
+main {
+  background-color: rgb(235, 235, 235);
+}
+h2 {
+  padding: 15px;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 500;
+  color: #555555;
+}
+
+/* Card Berita */
+.card_container{
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+}
+
+.card{
+  margin: 10px 10px;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card:hover{
+  background-color: gold;
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content p {
+  font-size: small;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.content a{
+font-size: small;
+}
+
+/*Footer*/
+footer {
+  background-color: #037951;
+  color: white;
+  padding: auto;
+  text-align: center;
+}
+
+@media screen and (max-width:768px){
+  .card_container{
+    flex-direction: column;
+  }
+  
+}
