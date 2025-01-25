@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu MAN Jeneponto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <img src="/logoman.png" alt="Logo">
+        <h1>Buku Tamu MAN Jeneponto</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('home')">Beranda</a>
+        <a href="#" onclick="showSection('data')">Data Tamu</a>
+        <a href="#" onclick="showSection('report')">Laporan Bulanan</a>
+    </nav>
+
+    <div class="container">
+        <div id="home" class="section">
+            <div class="form-container">
+                <div class="form-section">
+                    <h2>Formulir Tamu</h2>
+                    <form id="guestForm">
+                        <label for="fullName">Nama Lengkap:</label>
+                        <input type="text" id="fullName" name="fullName" required>
+
+                        <label for="address">Alamat:</label>
+                        <input type="text" id="address" name="address" required>
+
+                        <label for="phone">Nomor HP:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="visitPurpose">Tujuan Berkunjung:</label>
+                        <input type="text" id="visitPurpose" name="visitPurpose" required>
+
+                        <label for="visitCategory">Kategori:</label>
+                        <select id="visitCategory" name="visitCategory" required>
+                            <option value="">Pilih Kategori</option>
+                            <option value="Orang Tua Siswa">Orang Tua Peserta Didik</option>
+                            <option value="Kampus">Kampus / Universitas</option>
+                            <option value="Kemenag Kabupaten">Kemenag Kabupaten</option>
+                            <option value="Kanwil">Kanwil Kemenag Sulsel</option>
+                            <option value="LSM">LSM</option>
+                            <option value="Media">Media Online / Surat Kabar / Pers</option>
+                            <option value="Masyarakat Umum">Masyarakat Umum</option>
+                            <option value="Peserta Didik">Peserta Didik</option>
+                            <option value="Alumni MAN Jeneponto">Alumni MAN Jeneponto</option>
+                        </select>
+
+                        <button type="submit">Simpan</button>
+                    </form>
+                </div>
+                <div class="form-section">
+                    <video id="video" autoplay></video>
+                    <button type="button" id="capture">Ambil Foto</button>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="data" class="section" style="display: none;">
+            <h2>Data Tamu</h2>
+            <table id="guestTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Lengkap</th>
+                        <th>Alamat</th>
+                        <th>Nomor HP</th>
+                        <th>Tujuan</th>
+                        <th>Kategori</th>
+                        <th>Tanggal & Jam</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="report" class="section" style="display: none;">
+            <h2>Laporan Bulanan</h2>
+            <label for="month">Masukkan Bulan:</label>
+            <input type="text" id="month" placeholder="contoh: Januari">
+            <button id="downloadReport">Download PDF</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
